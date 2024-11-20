@@ -1,1 +1,423 @@
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+/*Header*/
+.topheader {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.horizontal_menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.horizontal_menu li {
+  border-radius: 15px; /* Bordes redondeados solo para cada elemento de la lista */
+  overflow: hidden; /* Asegura que los bordes redondeados se mantengan */
+}
+
+.horizontal_menu li a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: black;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: #cbd2cb;
+  transition: background-color #658147;
+}
+
+.horizontal_menu li a:hover {
+  background-color: #658147; /* Cambia el color al pasar el cursor */
+  color: white; /* Color del texto al pasar el cursor */
+}
+
+/*Principal*/
+.hero {
+  display: flex;
+  justify-content: flex-start; /* Alinea a la izquierda */
+  align-items: center; /* Centra verticalmente */
+  height: 80vh; /* Ocupa toda la pantalla */
+  background-image: url("img/bg.png");
+  background-size: cover 1920px 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Para ajustar elementos posicionados dentro */
+}
+
+.text-section {
+  max-width: 50%; /* Limitar ancho del texto */
+  padding: 0 20px; /* Espaciado lateral */
+  color: white; /* Texto legible */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
+  position: absolute; /* Mover usando top y left */
+  top: 50%; /* Centrado vertical */
+  left: 10%; /* Espaciado desde la izquierda */
+  transform: translateY(-50%); /* Ajuste para centrado exacto */
+}
+
+.text-section h1 {
+  font-size: 3rem;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero-image2 {
+  position: absolute;
+  bottom: 10px; /* Ajusta la separación desde la parte inferior */
+  right: 15px; /* Ajusta la separación desde la derecha */
+  width: 800px; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción */
+  filter: grayscale(100%) brightness(65%);
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 10px; /* Ajusta la separación desde la parte inferior */
+  right: 0; /* Ajusta la separación desde la derecha */
+  width: 800px; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción */
+}
+
+/*Noticias*/
+.news {
+  padding: 50px 20px;
+  background-color: #e7f0dc; /* Aquí puedes elegir el color que prefieras */
+}
+
+.news h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  text-decoration: underline;
+  color: #597445;
+}
+
+.news .more-news {
+  font-size: 1.2rem; /* Tamaño de fuente para "More News" */
+  color: #597445; /* Puedes cambiar este color si lo deseas */
+  text-align: right;
+  margin-right: 150px;
+  cursor: pointer; /* Agrega un cursor de puntero si es un enlace */
+}
+
+.news .more-news:hover {
+  text-decoration: underline; /* Subraya el texto al pasar el mouse por encima */
+}
+
+.news-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 20px;
+  justify-items: center;
+}
+
+.news-item {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-item:hover {
+  transform: scale(1.05);
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.subtext {
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+/*Plans*/
+
+.plans {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  padding: 50px 20px; /* Espaciado de la sección */
+  background-color: #597445; /* Fondo claro para la sección */
+}
+
+.plans-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%; /* Limitar el ancho máximo */
+  width: 100%;
+}
+
+.image-container {
+  flex: 0 0 auto; /* Imagen ocupa 1/2 de la sección */
+  max-width: 50%; /* Limita el tamaño de la imagen */
+  left: 0;
+  bottom: 0;
+}
+
+.plan-image {
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  height: auto; /* Mantiene la proporción */
+}
+
+.text-container {
+  flex: 1; /* El texto ocupa el resto del espacio */
+  padding: 20px;
+  text-align: center; /* Alinea el texto a la izquierda */
+  margin-left: 20px;
+}
+
+.text-container h1 {
+  font-size: 3rem;
+  color: white; /* Color para el título */
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+  margin-bottom: 30px; /* Espaciado inferior */
+  max-width: 800px; /* Limita el ancho del párrafo */
+  margin-left: auto; /* Centra el párrafo */
+  margin-right: auto; /* Centra el párrafo */
+  text-align: justify; /* Justifica el texto */
+}
+
+.see-plans-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ccd2cb; /* Color del botón */
+  color: #729762;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer;
+}
+
+.see-plans-btn:hover {
+  color: white;
+  background-color: #455a38; /* Color de fondo del botón al pasar el mouse */
+}
+
+/*About us*/
+
+.about {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  padding: 50px 20px; /* Espaciado de la sección */
+  background-color: #e7f0dc; /* Fondo claro para la sección */
+}
+
+.about-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%; /* Limitar el ancho máximo */
+  width: 100%;
+  flex-direction: row-reverse; /* Cambia el orden de los elementos (imagen a la izquierda y texto a la derecha) */
+}
+
+.about_text-container {
+  flex: 1; /* El texto ocupa el resto del espacio */
+  padding: 20px;
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.about_text-container h1 {
+  font-size: 3rem;
+  color: #729762; /* Color para el título */
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.about_text-container p {
+  font-size: 1.5rem;
+  color: #729762;
+  margin-bottom: 30px;
+  line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+  max-width: 800px; /* Limita el ancho del párrafo */
+  text-align: justify; /* Justifica el texto */
+}
+
+.about_image-container {
+  flex: 0 0 auto; /* La imagen ocupa un espacio fijo */
+  width: 40%; /* Limita el tamaño de la imagen */
+}
+
+.about-image {
+  width: 100%; /* La imagen ocupa todo el ancho disponible en el contenedor */
+  height: auto; /* Mantiene la proporción */
+}
+
+/*FORMULARY SECTION*/
+
+.Inscription-Section {
+  padding: 40px 20px;
+  margin-top: 30px;
+  background-color: #729762;
+}
+
+.Container-Inscripción {
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form fieldset {
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+form ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+form li {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: bold;
+  display: inline-block;
+  width: 80px;
+}
+
+form input[type="text"],
+form select {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+form input[type="radio"] {
+  margin-left: 10px;
+}
+
+form .btnEnviar {
+  background-color: #ccd2cb;
+  color: #729762;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form .btnEnviar:hover {
+  background-color: #658147;
+  color: #e7f0dc;
+}
+
+p {
+  text-align: center;
+}
+
+/*PIE*/
+.footer-section {
+  background-color: #597445;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  width: 20%;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-line {
+  border: 0;
+  height: 2px;
+  background-color: white;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
 
